@@ -16,12 +16,9 @@ from dataclasses import dataclass
 @dataclass
 class DataIngestionConfig:
     artifact_folder: str = os.path.join(artifact_folder)
-    
-        
 
 class DataIngestion:
     def __init__(self):
-        
         self.data_ingestion_config = DataIngestionConfig()
         self.utils = MainUtils()
 
@@ -38,6 +35,8 @@ class DataIngestion:
                 df = df.drop(columns=["_id"], axis=1)
 
             df.replace({"na": np.nan}, inplace=True)
+
+ #           df = df.iloc[:100].copy()   # to reduce rows in dataframe as programe taking long processing time
 
             return df
 

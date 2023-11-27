@@ -23,10 +23,6 @@ class DataTransformationConfig:
     transformed_object_file_path=os.path.join( artifact_dir, 'preprocessor.pkl' )
 
 
-
-
-
-
 class DataTransformation:
     def __init__(self,
                  feature_store_file_path):
@@ -34,7 +30,6 @@ class DataTransformation:
         self.feature_store_file_path = feature_store_file_path
 
         self.data_transformation_config = DataTransformationConfig()
-
 
         self.utils =  MainUtils()
         
