@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template('home_file.html')  #"Welcome to my application"
+    return render_template('home_file.html') #welcome to wafer fault detection
 
 
 @app.route("/train")
